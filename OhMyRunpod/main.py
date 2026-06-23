@@ -21,6 +21,7 @@ def load_runpod_modules():
 
     console = Console()
 
+
 def run_interactive_mode():
     """Run the interactive menu mode"""
     menu = InteractiveMenu()
@@ -69,6 +70,7 @@ def run_interactive_mode():
             console.print("\n[dim]Press any key to continue...[/dim]")
             input()
 
+
 def main():
     parser = argparse.ArgumentParser(description="OhMyRunpod Command Line Tool")
     parser.add_argument('--setup-ssh', action='store_true', help='Run the SSH setup script')
@@ -80,8 +82,7 @@ def main():
     args = parser.parse_args()
 
     if should_block_outside_runpod():
-        print(outside_runpod_message())
-        sys.exit(1)
+        parser.exit(1, outside_runpod_message() + "\n")
 
     load_runpod_modules()
 
