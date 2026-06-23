@@ -10,7 +10,7 @@ from rich.table import Table
 from rich.prompt import Prompt, Confirm
 from rich.progress import Progress, SpinnerColumn, TextColumn
 from rich.align import Align
-from OhMyRunPod.utils.menu import BaseMenu
+from OhMyRunpod.utils.menu import BaseMenu
 
 console = Console()
 
