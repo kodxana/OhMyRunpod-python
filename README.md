@@ -17,7 +17,7 @@ OhMyRunpod is a comprehensive command-line tool designed to facilitate various o
 
 ## Installation
 
-OhMyRunpod is intended to be installed and run inside Runpod pods only. The package checks for Runpod-provided environment variables during installation and startup so users do not accidentally install it on a personal machine.
+OhMyRunpod is intended to run inside Runpod pods only. The command checks for Runpod-provided environment variables at startup so users do not accidentally run it on a personal machine, while package builds and CI can still create source and wheel distributions.
 
 To install OhMyRunpod on a Runpod pod, you can use pip:
 
@@ -25,10 +25,10 @@ To install OhMyRunpod on a Runpod pod, you can use pip:
 pip install OhMyRunpod
 ```
 
-For local development or CI outside Runpod, explicitly opt in to bypass the guard:
+For local development outside Runpod, installation and package builds work normally. Explicitly opt in only when you need to run the command locally:
 
 ```bash
-OHMYRUNPOD_ALLOW_LOCAL_INSTALL=1 pip install -e .
+pip install -e .
 OHMYRUNPOD_ALLOW_LOCAL_INSTALL=1 OhMyRunpod --info
 ```
 
