@@ -17,10 +17,19 @@ OhMyRunpod is a comprehensive command-line tool designed to facilitate various o
 
 ## Installation
 
-To install OhMyRunpod, you can use pip:
+OhMyRunpod is intended to run inside Runpod pods only. The command checks for Runpod-provided environment variables at startup so users do not accidentally use it on a personal machine.
+
+To install OhMyRunpod on a Runpod pod, you can use pip:
 
 ```bash
 pip install OhMyRunpod
+```
+
+For local development or CI outside Runpod, install normally and explicitly opt in when running the command:
+
+```bash
+pip install -e .
+OHMYRUNPOD_ALLOW_LOCAL_INSTALL=1 OhMyRunpod --info
 ```
 
 ## Usage
@@ -77,7 +86,7 @@ OhMyRunpod provides comprehensive ComfyUI management through integration with [c
 ## Requirements
 
 - Python 3.7+
-- Linux environment (designed for RunPod)
+- Linux environment (designed for Runpod)
 - Rich library for terminal UI (automatically installed)
 
 ## Contributing

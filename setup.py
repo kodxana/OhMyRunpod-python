@@ -6,9 +6,10 @@ with open(os.path.join(os.path.dirname(__file__), 'README.md'), encoding='utf-8'
 
 setup(
     name='OhMyRunpod',
-    version='0.6.3',
+    version='0.6.4',
     author='Madiator2011',
     author_email='admin@madiator.com',
+    license='GPL-3.0-or-later',
     url='https://github.com/kodxana/OhMyRunpod-python',
     packages=find_packages(),
     include_package_data=True,
@@ -18,8 +19,8 @@ setup(
         'rich>=13.0.0',
     ],
     project_urls={
-        'Source': 'https://github.com/kodxana/OhMyRunPod-python',
-        'Bug Reports': 'https://github.com/kodxana/OhMyRunPod-python/issues',
+        'Source': 'https://github.com/kodxana/OhMyRunpod-python',
+        'Bug Reports': 'https://github.com/kodxana/OhMyRunpod-python/issues',
     },
     entry_points={
         'console_scripts': [
@@ -29,7 +30,6 @@ setup(
     classifiers=[
         'Development Status :: 4 - Beta',
         'Intended Audience :: Developers',
-        'License :: OSI Approved :: GNU General Public License v3 (GPLv3)',
         'Operating System :: POSIX :: Linux',
         'Programming Language :: Python :: 3',
         'Programming Language :: Python :: 3.7',
