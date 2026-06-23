@@ -86,7 +86,7 @@ OhMyRunpod provides comprehensive ComfyUI management through integration with [c
 ## Requirements
 
 - Python 3.7+
-- Linux environment (designed for RunPod)
+- Linux environment (designed for Runpod)
 - Rich library for terminal UI (automatically installed)
 
 ## Contributing
