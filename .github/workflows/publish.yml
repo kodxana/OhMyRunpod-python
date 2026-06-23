@@ -26,12 +26,16 @@ jobs:
         run: python -m pip install --upgrade build twine
 
       - name: Build package distributions
-        env:
-          OHMYRUNPOD_ALLOW_LOCAL_INSTALL: "1"
         run: python -m build
 
       - name: Check package distributions
         run: python -m twine check dist/*
+
+      - name: Install built wheel
+        run: python -m pip install dist/*.whl
+
+      - name: Smoke test CLI help
+        run: OhMyRunpod --help
 
       - name: Upload package distributions
         uses: actions/upload-artifact@v4
