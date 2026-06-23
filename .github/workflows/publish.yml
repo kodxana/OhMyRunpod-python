@@ -37,6 +37,17 @@ jobs:
       - name: Smoke test CLI help
         run: OhMyRunpod --help
 
+      - name: Smoke test local Runpod guard
+        shell: bash
+        run: |
+          if output="$(OhMyRunpod --info 2>&1)"; then
+            echo "OhMyRunpod unexpectedly ran outside Runpod"
+            exit 1
+          fi
+
+          echo "$output"
+          grep -Fq "intended to run only inside Runpod pods" <<< "$output"
+
       - name: Upload package distributions
         uses: actions/upload-artifact@v4
         with:
