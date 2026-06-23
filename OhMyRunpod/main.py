@@ -70,12 +70,6 @@ def run_interactive_mode():
             input()
 
 def main():
-    if should_block_outside_runpod():
-        print(outside_runpod_message())
-        sys.exit(1)
-
-    load_runpod_modules()
-
     parser = argparse.ArgumentParser(description="OhMyRunpod Command Line Tool")
     parser.add_argument('--setup-ssh', action='store_true', help='Run the SSH setup script')
     parser.add_argument('--info', action='store_true', help='Display information about the Pod')
@@ -84,6 +78,12 @@ def main():
     parser.add_argument('--simple-ui', action='store_true', help='Force simple UI mode (no arrow keys)')
 
     args = parser.parse_args()
+
+    if should_block_outside_runpod():
+        print(outside_runpod_message())
+        sys.exit(1)
+
+    load_runpod_modules()
 
     # Check if any arguments were provided
     if len(sys.argv) == 1:
