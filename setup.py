@@ -6,7 +6,7 @@ with open(os.path.join(os.path.dirname(__file__), 'README.md'), encoding='utf-8'
 
 setup(
     name='OhMyRunpod',
-    version='0.6.4',
+    version='0.6.5',
     author='Madiator2011',
     author_email='admin@madiator.com',
     url='https://github.com/kodxana/OhMyRunpod-python',
