@@ -8,7 +8,7 @@ class InteractiveMenu:
         self.console = Console()
         self.options = [
             ("SSH Setup", "Configure SSH server and create connection scripts"),
-            ("Pod Information", "Display RunPod environment information"),
+            ("Pod Information", "Display Runpod environment information"),
             ("File Transfer", "Setup file transfer with croc or SFTP"),
             ("ComfyUI", "Install and manage ComfyUI"),
             ("Exit", "Exit the application"),
@@ -17,7 +17,7 @@ class InteractiveMenu:
     def run(self) -> int:
         menu = BaseMenu(
             title="OhMyRunpod",
-            subtitle="RunPod Environment Management Tool",
+            subtitle="Runpod Environment Management Tool",
             options=self.options,
             breadcrumbs=["Home"],
             help_lines=[

@@ -1,14 +1,25 @@
 import argparse
 import os
 import sys
-from OhMyRunpod.modules.ssh_setup.ssh_setup import run_ssh_setup_script
-from OhMyRunpod.modules.pod_info import print_pod_info
-from OhMyRunpod.modules.file_transfer import show_file_transfer_menu
-from OhMyRunpod.modules.comfyui import show_comfyui_menu
-from OhMyRunpod.ui import InteractiveMenu
-from rich.console import Console
 
-console = Console()
+from OhMyRunpod.environment import outside_runpod_message, should_block_outside_runpod
+
+console = None
+
+
+def load_runpod_modules():
+    """Load dependencies only after the Runpod environment guard passes."""
+    global Console, InteractiveMenu, console
+    global run_ssh_setup_script, print_pod_info, show_file_transfer_menu, show_comfyui_menu
+
+    from rich.console import Console
+    from OhMyRunpod.modules.ssh_setup.ssh_setup import run_ssh_setup_script
+    from OhMyRunpod.modules.pod_info import print_pod_info
+    from OhMyRunpod.modules.file_transfer import show_file_transfer_menu
+    from OhMyRunpod.modules.comfyui import show_comfyui_menu
+    from OhMyRunpod.ui import InteractiveMenu
+
+    console = Console()
 
 def run_interactive_mode():
     """Run the interactive menu mode"""
@@ -59,6 +70,12 @@ def run_interactive_mode():
             input()
 
 def main():
+    if should_block_outside_runpod():
+        print(outside_runpod_message())
+        sys.exit(1)
+
+    load_runpod_modules()
+
     parser = argparse.ArgumentParser(description="OhMyRunpod Command Line Tool")
     parser.add_argument('--setup-ssh', action='store_true', help='Run the SSH setup script')
     parser.add_argument('--info', action='store_true', help='Display information about the Pod')
