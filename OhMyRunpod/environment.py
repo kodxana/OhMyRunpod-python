@@ -28,7 +28,7 @@ def local_install_override_enabled(environ: Optional[Mapping[str, str]] = None) 
 
 
 def should_block_outside_runpod(environ: Optional[Mapping[str, str]] = None) -> bool:
-    """Return True when OhMyRunpod should refuse to run or install."""
+    """Return True when OhMyRunpod should refuse runtime execution."""
     return not is_runpod_environment(environ) and not local_install_override_enabled(environ)
 
 
