@@ -1,6 +1,6 @@
-# OhMyRunPod
+# OhMyRunpod
 
-OhMyRunPod is a comprehensive command-line tool designed to facilitate various operations within a Runpod environment. It provides both CLI arguments and an interactive GUI with arrow key navigation for easy pod management.
+OhMyRunpod is a comprehensive command-line tool designed to facilitate various operations within a Runpod environment. It provides both CLI arguments and an interactive GUI with arrow key navigation for easy pod management.
 
 ## Features
 
@@ -17,20 +17,20 @@ OhMyRunPod is a comprehensive command-line tool designed to facilitate various o
 
 ## Installation
 
-To install OhMyRunPod, you can use pip:
+To install OhMyRunpod, you can use pip:
 
 ```bash
-pip install OhMyRunPod
+pip install OhMyRunpod
 ```
 
 ## Usage
 
 ### Interactive Mode (Recommended)
 
-Simply run OhMyRunPod without any arguments to launch the interactive GUI:
+Simply run OhMyRunpod without any arguments to launch the interactive GUI:
 
 ```bash
-OhMyRunPod
+OhMyRunpod
 ```
 
 Navigate using arrow keys, Enter to select, and ESC to go back.
@@ -41,27 +41,27 @@ You can also use specific command-line arguments:
 
 #### Setup SSH
 ```bash
-OhMyRunPod --setup-ssh
+OhMyRunpod --setup-ssh
 ```
 
 #### Display Pod Information
 ```bash
-OhMyRunPod --info
+OhMyRunpod --info
 ```
 
 #### File Transfer Setup
 ```bash
-OhMyRunPod --file-transfer
+OhMyRunpod --file-transfer
 ```
 
 #### ComfyUI Management
 ```bash
-OhMyRunPod --comfyui
+OhMyRunpod --comfyui
 ```
 
 ## ComfyUI Integration
 
-OhMyRunPod provides comprehensive ComfyUI management through integration with [comfy-cli](https://github.com/Comfy-Org/comfy-cli):
+OhMyRunpod provides comprehensive ComfyUI management through integration with [comfy-cli](https://github.com/Comfy-Org/comfy-cli):
 
 - **Template Detection**: Automatically detects common ComfyUI templates made for Runpod
 - **Custom Nodes**: Install, update, and manage custom nodes
@@ -82,7 +82,7 @@ OhMyRunPod provides comprehensive ComfyUI management through integration with [c
 
 ## Contributing
 
-Contributions to OhMyRunPod are welcome! Please feel free to submit pull requests or open issues to discuss proposed changes or report bugs.
+Contributions to OhMyRunpod are welcome! Please feel free to submit pull requests or open issues to discuss proposed changes or report bugs.
 
 ## License
 
@@ -92,4 +92,4 @@ This project is licensed under the [GPL-3.0 license](LICENSE).
 
 - **Creator**: Madiator2011
 - **ComfyUI Integration**: Powered by [Comfy-Cli](https://github.com/Comfy-Org/comfy-cli)
-- Special thanks to everyone who contributed to the development and maintenance of OhMyRunPod.
+- Special thanks to everyone who contributed to the development and maintenance of OhMyRunpod.

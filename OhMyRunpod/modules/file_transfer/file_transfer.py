@@ -13,9 +13,9 @@ from rich.table import Table
 from rich.prompt import Prompt
 from rich.progress import Progress, SpinnerColumn, TextColumn
 from rich.align import Align
-from OhMyRunPod.utils.menu import BaseMenu
+from OhMyRunpod.utils.menu import BaseMenu
 
-from OhMyRunPod.modules.ssh_setup.ssh_setup import run_ssh_setup
+from OhMyRunpod.modules.ssh_setup.ssh_setup import run_ssh_setup
 
 console = Console()
 

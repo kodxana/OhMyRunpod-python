@@ -1,6 +1,6 @@
 from rich.console import Console
 from rich.text import Text
-from OhMyRunPod.utils.menu import BaseMenu
+from OhMyRunpod.utils.menu import BaseMenu
 
 
 class InteractiveMenu:
@@ -16,7 +16,7 @@ class InteractiveMenu:
 
     def run(self) -> int:
         menu = BaseMenu(
-            title="OhMyRunPod",
+            title="OhMyRunpod",
             subtitle="RunPod Environment Management Tool",
             options=self.options,
             breadcrumbs=["Home"],
